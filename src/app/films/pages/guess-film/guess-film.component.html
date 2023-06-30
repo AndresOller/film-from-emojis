@@ -1,0 +1,17 @@
+<div class="flex gap-4 my-10">
+  <films-emojis class="grow" [emoji]="film?.emoji"></films-emojis>
+  <button
+    (click)="changeFilm()"
+    class="p-5 font-bold text-white uppercase shadow-lg shadow-black bg-sky-900 rounded-3xl hover:bg-sky-800"
+  >
+    Otra película
+  </button>
+</div>
+<shared-message>
+  {{ message }}
+</shared-message>
+<films-options
+  [films]="filmsOptons"
+  (selectOption)="isOptionSameOfFilm($event)"
+  #option
+></films-options>

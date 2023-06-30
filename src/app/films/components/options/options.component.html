@@ -1,0 +1,9 @@
+<section class="flex flex-wrap justify-center gap-4">
+  <button
+    *ngFor="let film of films"
+    (click)="emitSelectedOption(film)"
+    class="w-full p-6 font-bold uppercase shadow-lg md:p-8 bg-lime-200 rounded-3xl hover:bg-lime-100 shadow-black"
+  >
+    {{ film.title }}
+  </button>
+</section>
